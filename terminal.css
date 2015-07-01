@@ -1,0 +1,18 @@
+.terminal-container pre {
+	margin:0;
+}
+
+.terminal-container input {
+	background:none;
+	border:none;
+	width:100%;
+	margin:0;
+	margin-top:1em;
+	color:green;
+}
+
+.line {
+	display:inline-block;
+	max-width:100%;
+	overflow:hidden;
+}

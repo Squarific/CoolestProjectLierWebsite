@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Coolest Project Lier</title>
+		<link rel="stylesheet" type="text/css" href="terminal.css" />
+
+		<style type="text/css">
+			body {
+				background:rgb(22, 22, 22);
+			}
+
+			#terminal {
+				position:absolute;
+				color:green;
+				padding:1em;
+				left:0;
+				right:0;
+				top:0;
+				max-height:90%;
+				max-height:calc(100% - 2em);
+				overflow-y:auto;
+			}
+		</style>
+
+		<meta name="viewport" content="width=device-width">
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		
+		<meta property="fb:admins" content="100000842878520" />
+		<meta name="description" content="Coolest project lier is een beurs waarop kinderen hun project kunnen laten zien en meedoen aan de robot cup.">
+		<link rel="shortcut icon" href="images/favicon.ico?t=1435588488209"> 
+	</head>
+	<body>
+		<div id="terminal"></div>
+		<script src="Terminal.js"></script>
+		<script type="text/javascript">
+			function init () {
+				terminal = new Terminal(document.getElementById("terminal"));
+				terminal.writeLine(new Array(terminal.width).join("="));
+				header("Coolest Project Lier");
+				header("Website");
+				terminal.writeLine(new Array(terminal.width).join("="));
+				terminal.writeLine(" ");
+
+				terminal.writeLine("Welkom op de coolest project lier.");
+				terminal.writeLine(" ");
+				terminal.writeLine("Type home als je een normale webpagina wilt.");
+				terminal.writeLine("Type help om de commandos te zien.");
+			}
+
+			function header (text) {
+				terminal.writeLine("= " + text + new Array(Math.max(terminal.width - text.length - 4, 0)).join(" ") + " =");
+			}
+
+			init();
+			var width = document.body.offsetWidth;
+			window.addEventListener("resize", function () {
+				if (width !== document.body.offsetWidth) {
+					init();
+				}
+			});
+		</script>
+	</body>
+</html>
