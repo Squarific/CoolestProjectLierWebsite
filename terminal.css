@@ -9,6 +9,8 @@
 	margin:0;
 	margin-top:1em;
 	color:green;
+	outline: none;
+	font-family: monospace
 }
 
 .line {
